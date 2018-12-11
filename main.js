@@ -1,5 +1,11 @@
 "use strict"
 
+let header = document.querySelector("h1");
+header.innerHTML="My Github Profile";
+
+
+
+
 let container = document.createElement('div');
 
 axios.get("https://api.github.com/users/AronWinston?access_token=ea1e16998e31da6948773e59562827c5be997cf3")
@@ -31,7 +37,7 @@ axios.get("https://api.github.com/users/AronWinston/repos")
         let projects = document.createElement('a');
         projects.innerHTML += "<br/>";
         projects.innerHTML += "<br/>";
-        projects.innerHTML += `<em>Repository Name: ${repos[i].name}</em>`;
+        projects.innerHTML += `<li><em>Repository Name: ${repos[i].name}</em></li>`;
         projects.href += repos[i].html_url;
         
 
